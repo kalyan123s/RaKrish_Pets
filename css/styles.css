@@ -1,0 +1,953 @@
+/*************************===============Section/Home-Page===================**************************/
+#title {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#dog_bg_img {
+  display: none;
+}
+
+.video_container video {
+  z-index: -1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homepage_texts {
+  font-family: 'Baloo Tamma', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgb(9, 108, 255);
+}
+
+/* *****Typing Animation of Welcome***** */
+.welcome {
+  font-family: 'Bowlby One', cursive;
+  color: #000000;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgb(198, 255, 9);
+  max-width: fit-content;
+  /*width of the box will be as much as "welcome" */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /*Keeps the content on a single line */
+  margin: 0 auto;
+  /*Gives that scrolling effect as the typing happens */
+  letter-spacing: 10px;
+  animation: typing 4s steps(9) forwards infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* *************************=================Navbar header===================*************************** */
+.navbar {
+  background-color: #050b1f !important;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 70px;
+  z-index: 100;
+}
+
+.logo img {
+  height: 40px ;
+  max-width: 100% ;
+  border-radius: 15px;
+  border-bottom: 5px solid rgb(196, 195, 195);
+  border-right: 5px solid rgb(197, 197, 197);
+  margin-left: 20px;
+}
+
+.navbar .search_box {
+  flex: 1;
+  position: relative;
+  margin-left: 20px;
+  /* max-width: 500px; */
+}
+
+.search_box input {
+  width: 70%;
+  height: 34px;
+  position: relative;
+  left: 30%;
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  color: #474f4b;
+  font-family: arial;
+  font-size: 15px;
+  text-align: center;
+}
+
+.search_box button {
+  cursor: pointer;
+  height: 34px;
+  width: 34px;
+  border-radius: 34px;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* Do search button inside the searchbar */
+  transform: scale(0.9);
+  background-color: green;
+}
+
+.navbar .links {
+  flex: 2;
+  margin-top: 13px;
+  margin-left: 35px;
+  margin-right: 35px;
+  display: flex;
+  justify-content: center;
+  max-width: fit-content;
+}
+.navbar .links li a {
+  color: red;
+  font-weight: bold;
+  padding: 10px 10px;
+  margin-right: 15px;
+}
+
+.navbar .links li,
+a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar .links li a:hover {
+  scale: 1.1;
+  border-bottom: 2px solid powderblue;
+  color: #2796ff;
+}
+
+/**************Menu bars*****************/
+.navbar .menu {
+  font-size: 2em;
+  margin: 10px;
+  color: rgb(197, 197, 197);
+  cursor: pointer;
+  display: none;
+}
+
+/* ************login button************* */
+.login_btn{
+  margin-right: 10px;
+  padding: 0.3em 1em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.login_btn:before {
+  content: "";
+  background: linear-gradient(45deg,#ff0000,#ff7300,#fffb00,#48ff00,#00ffd5,#002bff,#7a00ff,#ff00c8,#ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-login_btn 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-login_btn {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.login_btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/************dropdown_menu*************/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 50px;
+  height: 0;
+  width: 200px;
+  background-color: #eae6e6;
+  padding: 0px 30px;
+  backdrop-filter: blur(100px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 230px;
+}
+
+.dropdown_menu li {
+  padding: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #474f4b;
+}
+
+/* *********************===================Section/Features=======================************************ */
+
+#features {
+  padding: 10rem 0;
+  background-color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+}
+
+.features_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features_header h1{
+  font-weight: bold !important;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+  width: 350px;
+  border-radius: 50px 0 ;
+  background-color: rgb(128, 0, 128);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  position: relative;
+  bottom: 60px;
+  padding: 15px 40px;
+}
+.feature_container{
+  width: 100%;
+  margin: 0 auto;
+  max-width: fit-content;
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+  flex-wrap: wrap;      /*This will make the feature boxes wrap to a new line when the container width is insufficient, and evenly distribute the remaining space8*/
+  position: relative;
+  top: 12%;
+}
+
+.feature-box {
+  text-align: center;
+  position: relative;
+  border: 2px solid blue;
+  /* Remove height and width properties */
+  height: 300px;
+  width: 350px;
+  /* Add relative units */
+  max-width: 100%;
+  padding: 20px;
+  margin:20px 5px;
+}
+
+.heart {
+  color: red;
+}
+
+.check {
+  color: rgb(0, 255, 0);
+}
+
+.quality {
+  color: rgb(181, 0, 181);
+}
+
+.feature_box p {
+  font-weight: bold;
+  text-align: justify;
+}
+
+.feature-box h3{
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+/* ************************================Section/Pricing==================************************** */
+
+#pricing{
+  box-sizing: border-box;
+  padding:6rem 0;
+  background: linear-gradient(to left, #010b63, #004e92);
+  font-family: Arial, Helvetica, sans-serif;
+  height: auto;
+  /* flex-direction: column; */
+}
+
+.price_header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: purple;
+  text-align: center;
+  border-radius: 50px 0;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  max-width: 450px;
+}
+
+.price_header h2{
+  font-weight: bold !important;
+  font-size: 35px;
+  color: #fff;
+  text-align: center;
+  flex: 2;
+  padding: 15px 40px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price_container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 50px 30px;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.price_box{
+  height: 400px;
+  width: 350px;
+  text-align: center;
+  border-radius: 50px 0; 
+  box-shadow: 10px 10px 30px #000000;
+  margin:20px 5px;
+  overflow: hidden;
+}
+
+.price_box img{
+  height: 400px;
+  width: 350px;
+  border-radius: 50px 0;
+}
+
+.price_box .dogs_intro{
+  height: 350px;
+  width: 350px;
+  box-sizing: border-box;
+  padding:0 30px;
+  position: relative;
+  bottom: 350px;
+  background-color:rgb(27,27,27,0.3);
+  z-index: 99;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.price_box h3{
+  color: #ffffff;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.price_box h2{
+   font-family:'Baloo Tamma', cursive;
+   margin: 15px 0;
+}
+
+.price_box p{
+  color: rgb(0, 225, 255);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.price_box button{
+  background-color: rgb(255, 191, 16);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: relative;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.price_box:hover{
+  cursor: pointer;
+}
+
+.price_box:hover .dogs_intro{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ************************================Section/Testimonials==================************************** */
+
+#testimonials {
+  box-sizing: border-box;
+  margin: 0%;
+  min-height: 100vh;
+  padding: 5% 0 5% 0;
+  background: linear-gradient(90deg, #880fc4 0%, #1d39f2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  /* *****Testimonial card layout**** */
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: 'raleway', sans-serif;
+  color: rgb(250, 250, 250);
+  min-width: 100%;
+}
+
+.testimonial_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial_header h1 {
+  padding: 15px 50px;
+  border-radius: 0px 50px;
+  background-color: purple;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.cards_container {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
+  border-radius: 20px;
+  margin: 50px 20px;
+  padding: 20px 30px;
+  position: relative;
+  color: #f2f2f2;
+  background: #2796ff;
+  box-shadow: 10px 20px 25px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  line-height: 1.15;
+}
+
+
+.card img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 2px solid #f2f2f2;
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  background-color: black;
+}
+
+.card #above {
+  font-size: 20px;
+  position: relative;
+  bottom: 10px;
+  margin-right: 10px;
+}
+
+.card #below {
+  font-size: 20px;
+  position: relative;
+  top: 10px;
+  left: 5px;
+}
+
+.card h2 {
+  font-size: 30px;
+  text-align: center;
+  margin: 10px 5px 0px 0px;
+}
+
+.card h4 {
+  font-size: 15px;
+  text-align: center;
+  margin: 0px 5px 0 0;
+}
+
+.card p {
+  font-size: 18px;
+  margin: 40px 0px 0px 0px;
+  text-align: justify;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background: #000000;
+  color: rgb(0, 225, 255);
+}
+
+
+
+/* ***************************====================Footer======================*************************** */
+
+#footer {
+  background-color: #050b1f;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+.top-footer-text{
+  font-family:'Baloo Tamma', cursive;
+  font-weight: bold;
+  color: white;
+}
+.top-footer-text .tagline{
+  height: 10px;
+}
+.list-footer{
+  display: flex;
+  justify-content: center;
+  font-family:'Baloo Tamma', cursive;
+  margin-top: 20px;
+}
+.list-footer a{
+  font-size: 15px;
+}
+.All-contacts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.All-contacts a{
+  color: white;
+  font-size: 30px;
+  margin: 5px 20px;
+}
+.footer-copyright{
+  display: flex;
+  justify-content: center;
+}
+
+.All-contacts .discord:hover{
+  color: #5865F2;
+}
+.All-contacts .linkdin:hover{
+  color: rgb(10, 102, 194);
+}
+.All-contacts .instagram:hover{
+  color: #E4405F;
+}
+.All-contacts .github:hover{
+  color: rgb(200, 243, 213);
+}
+
+
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+/* ***************$$$$$$$$$$$$$$$$$=====Responsive design============&&&&&&$$$$$$$$$$$$******************* */
+
+
+
+@media(max-width:1000px) {
+/* ***********Navbar responsiveness********** */
+/* ***********Navbar responsiveness********** */
+/* ***********Navbar responsiveness********** */
+
+  .search_box button {
+    position: absolute;
+  }
+
+  .navbar .links,
+  .login_btn {
+    display: none ;
+  }
+
+  .dropdown_menu .login_btn {
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 30px;
+  }
+
+  .navbar .menu {
+    display: block;
+    margin-right: 25px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  .dropdown_menu {
+    display: block;
+    top: 75px;
+  }
+
+  .welcome {
+    font-size: 60px;
+    letter-spacing: 6px;
+  }
+
+  .homepage_texts {
+    flex: 2;
+    /*text-align: center;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+  }
+
+  /* ***********Feature responsiveness********** */
+  /* ***********Feature responsiveness********** */
+  /* ***********Feature responsiveness********** */
+
+  #features {
+    padding: 5rem 0;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    height: auto;
+  }
+  .feature-box {
+    text-align: center;
+    position: relative;
+    border: 2px solid blue;
+    /* Remove height and width properties */
+    height: 300px;
+    width: 500px;
+    /* Add relative units */
+    max-width: 100%;
+    padding: 30px;
+  }
+
+  .feature-box p{
+    font-size: larger;
+  }
+
+/* *******Testimonial responsiveness******** */
+/* *******Testimonial responsiveness******** */
+/* *******Testimonial responsiveness******** */
+
+.cards_container {
+  justify-content: center;
+}
+.testimonial_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* *******Feature Responsiveness********** */
+/* *******Feature Responsiveness********** */
+/* *******Feature Responsiveness********** */
+
+.top-footer-text{
+  font-family:'Baloo Tamma', cursive;
+  font-weight: bold;
+  color: white;
+}
+}
+
+/* ***********======$$$$$$$Phone sized screen$$$$$$$==========****** */
+/* ***********======$$$$$$$Phone sized screen$$$$$$$==========****** */
+/* ***********======$$$$$$$Phone sized screen$$$$$$$==========****** */
+
+
+@media screen and (max-width:600px) {
+  .video_container video {
+    display: none;
+  }
+
+  #dog_bg_img {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar .links,
+  .login_btn {
+    display: none;
+  }
+
+  .navbar {
+    position: sticky;
+    height: 60px;
+    margin-top: -1%;
+  }
+  .navbar div{
+    max-width: 150px;
+  }
+  .navbar .logo img{
+    height: 40px;
+    width: fit-content;
+    margin-left: 0px;
+    position: relative;
+    top: -5px;
+  }
+  
+  .search_box input{
+    position: relative;
+    right: 30%;
+    font-size: 13px;
+  }
+
+  .search_box button {
+    height: 34px;
+    width: 34px;
+    border-radius: 34px;
+    position: absolute;
+  }
+
+  .dropdown_menu li a {
+    color: rgb(20, 20, 21);
+    font-weight: bold;
+  }
+  
+  .dropdown_menu .login_btn{
+    position: relative;
+    left:10px;
+  }
+  .navbar .menu {
+    display: block;
+    position: relative;
+    margin-right: 10px;
+    padding: 0;
+    border-radius: 5px;
+    
+  }
+
+  .dropdown_menu {
+    position: absolute;
+    top: 65px;
+  }
+
+  .homepage_texts {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: rgb(0, 0, 0);
+    text-shadow: 1.5px 1.5px #1cff36;
+    filter: drop-shadow(-10px 10px 20px #ffffffa4);
+    border-radius: 10px;
+  }
+
+  .welcome {
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 10px rgba(22, 203, 203, 0.742);
+  }
+
+  /* **********Feauture box responsiveness********** */
+  /* **********Feauture box responsiveness********** */
+  /* **********Feauture box responsiveness********** */
+
+  .feature-box {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    border: 2px solid blue;
+    /* Remove height and width properties */
+    height: auto;
+    width: 350px;
+    /* Add relative units */
+    max-width: 90%;
+    margin: 10px;
+  }
+
+  .feature-box p{
+    font-size: larger;
+  }
+
+  /* **************Pricing box responsiveness************ */
+  /* **************Pricing box responsiveness************ */
+  /* **************Pricing box responsiveness************ */
+
+.price_header{
+  border-radius: 40px 0;
+  max-width: 350px;
+}
+
+.price_header h2{
+  font-weight: bold !important;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  flex: 2;
+  padding: 15px 30px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.price_container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2em;
+  padding: 50px 30px;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.price_box{
+  height: 330px;
+  width: 320px;
+  text-align: center;
+  border-radius: 10px; 
+  box-shadow: 10px 10px 30px #000000;
+  margin:20px 5px;
+  overflow: hidden;
+}
+
+.price_box img{
+  height: 350px;
+  width: 320px;
+  border-radius: 10px;
+}
+
+.price_box .dogs_intro{
+  height: 300px;
+  width: 320px;
+  box-sizing: border-box;
+  padding:0 30px;
+  position: relative;
+  bottom: 300px;
+  background-color:rgb(27,27,27,0.3);
+  z-index: 99;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.price_box h3{
+  font-weight: bold;
+}
+
+.price_box h2{
+   font-family:'Baloo Tamma', cursive;
+   margin: 10px 0;
+}
+
+.price_box p{
+  color: rgb(0, 255, 255);
+  font-size: 18px;
+}
+
+  /* ********Footer responsiveness******** */
+  /* ********Footer responsiveness******** */
+  /* ********Footer responsiveness******** */
+
+  .top-footer-text h1{
+    font-family:'Baloo Tamma', cursive;
+    font-weight: bold;
+    color: white;
+    font-size: 35px;
+  }
+  .top-footer-text .tagline{
+    font-size: 20px;
+  }
+  .list-footer a{
+    font-size: 20px;
+  }
+}

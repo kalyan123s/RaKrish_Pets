@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaKrish Pets</title>
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@700&family=Lobster&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet" />
+
+  <!-- Bootstrap scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+  <!-- font awesome for inverted comma icon for testimonials section-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- **********bootstrap  in testimonials******** -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
+
+  <!-- CSS stylsheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- image-icon along with title -->
+  <link rel="icon" href="./images/companyfavicon.ico">
+
+  <!-- *******navbar/menu bar link****** -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- ************************============Section/Home page===========*********************** -->
+  <section id="title">
+    <!-- Video of Home page* -->
+    <div class="video_container">
+      <video autoplay loop muted>
+        <source src="./css/Dog_mp4.mp4" type="video/mp4">
+      </video>
+      <img id="dog_bg_img" src="./images/Dog.jpg" alt="dog_image">
+    </div>
+    <!-- Nav Bar/header -->
+    <header>
+      <div class="navbar">
+        <div class="logo"><img src="images/Companylogo.png" class="img-fluid" alt="company_logo_image" /></div>
+        <div class="search_box">
+          <form action="Search">
+            <input type="text" placeholder="Search.." id="search_bar">
+            <button type="search" class="search_btn"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <ul class="links">
+          <li><a href="home">Home</a></li>
+          <li><a href="About">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="Contact">Contact</a></li>
+        </ul>
+        <button class="login_btn" role="button">Log in</button>
+        <div class="menu" onclick="toggleMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="dropdown_menu" id="dropdownMenu">
+          <li><a href="home">Home</a></li>
+          <li><a href="About">About</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="Contact">Contact</a></li>
+          <button class="login_btn" role="button">Log in</button>
+        </div>
+      </div>
+    </header>
+    <div>
+      <h1 class="homepage_texts">
+        <div class="welcome">Welcome!!</div>RaKrish Pets: Celebrating the Unbreakable Bond between Dogs and Humans -
+        Unleash Joy, Love, and Adventure with Our Canine Companions.
+      </h1>
+    </div>
+    </div>
+  </section>
+  <!-- *****************==============Section/Homepage end==========*********************** -->
+
+  <!-- ************************====================Features====================*********************** -->
+  <section id="features">
+    <div class="features_header">
+      <center>
+        <h1><strong>Features</strong></h1>
+      </center>
+    </div>
+    <div class="feature_container">
+      <div class="feature-box">
+        <i class="icon check fas fa-check-circle fa-4x"></i> <!-- circle-check image  with 4x size-->
+        <h3>Easy to use.</h3>
+        <p>Our user-friendly interface ensures a seamless browsing experience for both humans and their furry
+          friends.Discover the joy of effortless shopping for your beloved companion.</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="icon quality fas fa-bullseye fa-4x"></i> <!-- bullseye-image with 4x sixe -->
+        <h3>Elite Clientele.</h3>
+        <p>Elevate your dog's status with our unparalleled services designed exclusively for the elite. Experience
+          opulence and sophistication in every wag.</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="icon heart fas fa-heart fa-4x"></i> <!-- heart image with 4x size -->
+        <h3>Love Assured.</h3>
+        <p>Discover true love for your furry companion or get your money back! Our unique matchmaking service connects
+          dogs with their perfect partners, ensuring a lifetime of happiness.</p>
+      </div>
+
+      <div class="feature-box">
+        <img class="grooming_icon" src="./images/7297522.ico" alt="grooming_icon"
+          style="height:4em; width: 4em;"><!-- grooming image with 80px size -->
+        <h3>Pet Grooming.</h3>
+        <p>Our user-friendly interface ensures a seamless browsing experience for both humans and their furry
+          friends.Discover the joy of effortless shopping for your beloved companion.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ********************==============Features!The End====================*********************** -->
+
+  <!-- Press -->
+
+  <!-- <section id="press">
+    <img src="images/techcrunch.png" alt="tc-logo">
+    <img src="images/tnw.png" alt="tnw-logo">
+    <img src="images/bizinsider.png" alt="biz-insider-logo">
+    <img src="images/mashable.png" alt="mashable-logo">
+
+  </section>-->
+
+
+  <!-- **************************==============Pricing section====================************************** -->
+
+  <section id="pricing">
+    <div class="price_header">
+     <strong><h2>Pricing Overview</h2></strong>
+    </div>
+    <div class="price_container">
+
+      <div  class="price_box box1">
+        <img src="./images/Pomeranian.jpg" alt="dog's Name">
+        <div class="dogs_intro">
+        <h3>Pomeranian</h3>
+        <h2> ₹8,000 - ₹25,000</h2>
+        <p>Small Size</p>
+        <p>Fluffy Coat</p>
+        <p>Alert Nature</p>
+        <p>4000+ Pomeranian Found Their Forever Homes</p>
+        <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div  class="price_box box2">
+        <img src="./images/GermanShepherd.jpg" alt="dog's Name">
+        <div class="dogs_intro">
+        <h3>German Shepherd</h3>
+        <h2>₹12,000 - ₹35,000</h2>
+        <p>Intelligent Breed</p>
+        <p>Loyal and Protective</p>
+        <p>Versatile Working Dog</p>
+        <p>3400+ German Shepherd Found Their Forever Homes</p>
+        <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div  class="price_box box3">
+        <img src="./images/GoldenRetriever.jpg" alt="dog's Name">
+        <div class="dogs_intro">
+        <h3>Golden Retriever</h3>
+        <h2>₹15,000 - ₹40,000</h2>
+        <p>Friendly and Gentle</p>
+        <p>Intelligent and Obedient</p>
+        <p>Excellent Family Dog</p>
+        <p>2670+ Golden Retriever Found Their Forever Homes</p>
+        <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      
+      <div  class="price_box box4">
+        <img src="./images/SiberianHusky.jpg" alt="dog's Name">
+        <div class="dogs_intro">
+        <h3>Siberian Husky</h3>
+        <h2>₹50,000 - ₹90,000</h2>
+        <p>Energetic and Athletic</p>
+        <p>Independent and Adventurous</p>
+        <p>Thick Double Coat</p>
+        <p>1430+ Siberian Husky Found Their Forever Homes</p>
+        <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div  class="price_box box5">
+        <img src="./images/EnglishBulldog.png" alt="dog's Name">
+        <div class="dogs_intro">
+        <h3>English Bulldog</h3>
+        <h2>₹1,00,000 - ₹5,00,000</h2>
+        <p> Stout and Muscular</p>
+        <p>Affectionate and Friendly</p>
+        <p>Brachycephalic (Short-Nosed)</p>
+        <p>170+ English Bulldog Found Their Forever Homes</p>
+        <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+      <div  class="price_box box6">
+        <img src="./images/TibetanMastiff.jpg" alt="dog's Name">
+        <div class="dogs_intro">
+        <h3>Tibetan Mastiff</h3>
+        <h2>₹5,00,000 - ₹10,00,000</h2>
+        <p>Massive Size</p>
+        <p>Protective and Watchful</p>
+        <p>Thick, Weather-Resistant Coat</p>
+        <p>50+ Tibetan Mastiff Found Their Forever Homes</p>
+        <button type="button">Sign Up</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- **********************==================Testimonials=====================***************************-->
+
+  <section id="testimonials">
+    <div class="wrapper">
+      <div class="testimonial_header">
+        <h1><strong>Testimonials</strong></h1>
+      </div>
+      <!-- review card -->
+      <div class="cards_container">
+        <div class="card">
+          <img src="./images/P.K Sharma.png" alt="image1">
+          <p><i id="above" class="fa fa-quote-left"></i>I absolutely love this dog website! It's a one-stop 
+            destination for all dog enthusiasts in India. With its wide range of dog breeds and products, 
+            I found the perfect furry companion for my family. The excellent service made my shopping experience delightful.
+            <i id="below" class="fa fa-quote-right"></i>
+          </p>
+          <h2>P.K Sharma</h2>
+          <h4>Educator</h4>
+        </div>
+
+        <div class="card">
+          <img src="./images" alt="image2">
+          <p><i id="above" class="fa fa-quote-left"></i>Being a dog parent in India, I was thrilled 
+            to discover this fantastic dog website. The variety of dog breeds available is simply amazing,
+            and the detailed descriptions helped me make an informed choice. Kudos to the team for creating such a nice platform!.
+            <i id="below" class="fa fa-quote-right"></i>
+          </p>
+          <h2>Shrawan Kumar</h2>
+          <h4>Electrical Engineer</h4>
+        </div>
+
+        <div class="card">
+          <img src="./images" alt="image3">
+          <p><i id="above" class="fa fa-quote-left"></i>If you're a dog lover in India, look no further! 
+            This dog website is a game-changer. From adorable puppies to top-quality dog accessories, 
+            they have it all. It's the best place to find your four-legged companion with Trust, reliablity.
+            <i id="below" class="fa fa-quote-right"></i>
+          </p>
+          <h2>Anand Kumar</h2>
+          <h4> Electrical Engineer</h4>
+        </div>
+
+        <div class="card">
+          <img src="./images/Kalyan.png" alt="image4">
+          <p><i id="above" class="fa fa-quote-left"></i>I appreciated the extensive range of dog breeds, 
+            which catered to all my preferences. This site has everything to keep your furry companion happy and healthy.
+            Treat your furry companion like royalty with the this website!
+            <i id="below" class="fa fa-quote-right"></i>
+          </p>
+          <h2>Kalyan Sharma</h2>
+          <h4>Software Engineer</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <!-- <section id="cta">
+
+    <h3>Find the True Love of Your Dog's Life Today.</h3>
+    <button type="button">Download</button>
+    <button type="button">Download</button>
+
+  </section> -->
+
+  <!-- ********************************===============Footer Section=============************************************ -->
+
+  <footer id="footer" class="footer-section">
+    <div class="footer-content">
+      <div class="top-footer-text">
+        <center>
+          <h1>RaKrish Pets</h1>
+          <span class="tagline">A pet lover’s paradise</span>
+        </center>
+      </div>
+      <div class="list-footer">
+        <ul><a href="#about">About Us</a></ul>
+        <ul><a href="#contact">Contact</a></ul>
+        <ul><a href="#services">Services</a></ul>
+      </div>
+      <div class="All-contacts">
+        <a href="https://discord.com/channels/@me" class="icon discord" target="_blank"
+          aria-label="Join with us on Discord" title="Discord" rel="noopener noreferrer">
+          <div class="tooltip">Discord</div>
+          <span><i class="fab fa-discord"></i></span>
+        </a>
+        <a href="https://www.instagram.com/k_sharmazing143/" class="icon instagram" target="_blank"
+          aria-label="Visit us on Instagram" title="Instagram" rel="noopener noreferrer">
+          <div class="tooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </a>
+        <a href="https://github.com/kalyan123s" class="icon github" target="_blank" aria-label="Visit us on Github"
+          title="Github" rel="noopener noreferrer">
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/in/kalyan-sharma-23b7ab229/" class="icon linkdin" target="_blank"
+          aria-label="Visit us on Linkedin" title="Linkedin" rel="noopener noreferrer">
+          <div class="tooltip">Linkedin</div>
+          <span><i class="fab fa-linkedin"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div>
+      <div class="footer-copyright">
+        <center>
+          <h4>Made with ❤️ by <em>Kalyan Sharma</em></h4>
+          <p>Copyright © <em>2023</em> RaKrish Pets</p>
+        </center>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- *****************************======index.js/files==============*********************** -->
+  <script type="text/Javascript" src="./index.js"></script>
+</body>
+
+</html>
