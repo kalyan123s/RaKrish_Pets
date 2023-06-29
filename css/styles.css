@@ -891,7 +891,7 @@ a {
 
 .price_box{
   height: 330px;
-  width: 320px;
+  width: 325px;
   text-align: center;
   border-radius: 10px; 
   box-shadow: 10px 10px 30px #000000;
@@ -900,16 +900,16 @@ a {
 }
 
 .price_box img{
-  height: 350px;
-  width: 320px;
+  height: 340px;
+  width: 325px;
   border-radius: 10px;
 }
 
 .price_box .dogs_intro{
   height: 300px;
-  width: 320px;
+  width: 325px;
   box-sizing: border-box;
-  padding:0 30px;
+  padding:0 33px;
   position: relative;
   bottom: 300px;
   background-color:rgb(27,27,27,0.3);
