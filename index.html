@@ -16,19 +16,6 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
     rel="stylesheet" />
 
-  <!-- Bootstrap scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-
   <!-- font-awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -36,9 +23,6 @@
   <!-- font awesome for inverted comma icon for testimonials section-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- **********bootstrap  in testimonials******** -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css">
 
   <!-- CSS stylsheet -->
   <link rel="stylesheet" href="./css/styles.css">
@@ -50,6 +34,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -66,7 +51,7 @@
     <!-- Nav Bar/header -->
     <header>
       <div class="navbar">
-        <div class="logo"><img src="images/Companylogo.png" class="img-fluid" alt="company_logo_image" /></div>
+        <div class="logo"><a href="https://kalyan123s.github.io/RaKrish_Pets/"><img src="images/Companylogo.png" class="img-fluid" alt="company_logo_image" /></a></div>
         <div class="search_box">
           <form action="Search">
             <input type="text" placeholder="Search.." id="search_bar">
@@ -74,20 +59,20 @@
           </form>
         </div>
         <ul class="links">
-          <li><a href="home">Home</a></li>
-          <li><a href="About">About</a></li>
-          <li><a href="services">Services</a></li>
-          <li><a href="Contact">Contact</a></li>
+          <li><a href="#title">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#pricing">Services</a></li>
+          <li><a href="#footer">Contact</a></li>
         </ul>
         <button class="login_btn" role="button">Log in</button>
         <div class="menu" onclick="toggleMenu()">
           <i class="fa-solid fa-bars"></i>
         </div>
         <div class="dropdown_menu" id="dropdownMenu">
-          <li><a href="home">Home</a></li>
-          <li><a href="About">About</a></li>
-          <li><a href="services">Services</a></li>
-          <li><a href="Contact">Contact</a></li>
+          <li><a href="#title">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#pricing">Services</a></li>
+          <li><a href="#footer">Contact</a></li>
           <button class="login_btn" role="button">Log in</button>
         </div>
       </div>
@@ -99,6 +84,84 @@
       </h1>
     </div>
     </div>
+
+
+    <!-- *******************=============login page==============*********************** -->
+    <!-- <button class="login_btn">Login</button> -->
+    <div class="login_signup_container">
+        <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon" ><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon" ><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <span class="icon" ></span>
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">  Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+
+                <div class="login-signup">
+                    <p>
+                        Don't have an account? 
+                        <a href="#" class="Signup-link">Sign up</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+
+        <!-- *************=====Signup form=======************* -->
+        <div class="form-box signup">
+            <h2>Sign up</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon" ><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon" ><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon" ><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <!-- <span class="icon" ></span> -->
+                    <label><input type="checkbox"> I agree to the <a href="#">terms & conditions</a></label>
+                </div>
+                <button type="submit" class="btn">Sign up</button>
+
+                <div class="login-signup">
+                    <p>
+                        Already have an account? 
+                        <a href="#" class="login-link">Login</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+    <!-- *******************=============login page/THE END!==============*********************** -->
+    
   </section>
   <!-- *****************==============Section/Homepage end==========*********************** -->
 
@@ -171,7 +234,7 @@
         <p>Fluffy Coat</p>
         <p>Alert Nature</p>
         <p>4000+ Pomeranian Found Their Forever Homes</p>
-        <button type="button">Sign Up</button>
+        <button type="button" class="Signup-link">Sign Up</button>
         </div>
       </div>
 
@@ -184,7 +247,7 @@
         <p>Loyal and Protective</p>
         <p>Versatile Working Dog</p>
         <p>3400+ German Shepherd Found Their Forever Homes</p>
-        <button type="button">Sign Up</button>
+        <button type="button" class="Signup-link">Sign Up</button>
         </div>
       </div>
 
@@ -197,7 +260,7 @@
         <p>Intelligent and Obedient</p>
         <p>Excellent Family Dog</p>
         <p>2670+ Golden Retriever Found Their Forever Homes</p>
-        <button type="button">Sign Up</button>
+        <button type="button" class="Signup-link">Sign Up</button>
         </div>
       </div>
 
@@ -211,7 +274,7 @@
         <p>Independent and Adventurous</p>
         <p>Thick Double Coat</p>
         <p>1430+ Siberian Husky Found Their Forever Homes</p>
-        <button type="button">Sign Up</button>
+        <button type="button" class="Signup-link">Sign Up</button>
         </div>
       </div>
 
@@ -224,7 +287,7 @@
         <p>Affectionate and Friendly</p>
         <p>Brachycephalic (Short-Nosed)</p>
         <p>170+ English Bulldog Found Their Forever Homes</p>
-        <button type="button">Sign Up</button>
+        <button type="button" class="Signup-link">Sign Up</button>
         </div>
       </div>
 
@@ -237,7 +300,7 @@
         <p>Protective and Watchful</p>
         <p>Thick, Weather-Resistant Coat</p>
         <p>50+ Tibetan Mastiff Found Their Forever Homes</p>
-        <button type="button">Sign Up</button>
+        <button type="button" class="Signup-link">Sign Up</button>
         </div>
       </div>
 
@@ -255,7 +318,7 @@
       <div class="cards_container">
         <div class="card">
           <img src="./images/P.K Sharma.png" alt="image1">
-          <p><i id="above" class="fa fa-quote-left"></i>I absolutely love this dog website! It's a one-stop 
+          <p><i id="above" class="fa fa-quote-left"></i>I absolutely love this website! It's a one-stop 
             destination for all dog enthusiasts in India. With its wide range of dog breeds and products, 
             I found the perfect furry companion for my family. The excellent service made my shopping experience delightful.
             <i id="below" class="fa fa-quote-right"></i>
@@ -265,9 +328,9 @@
         </div>
 
         <div class="card">
-          <img src="./images" alt="image2">
+          <img src="./images/Shrawan Kumar.jpg" alt="image2">
           <p><i id="above" class="fa fa-quote-left"></i>Being a dog parent in India, I was thrilled 
-            to discover this fantastic dog website. The variety of dog breeds available is simply amazing,
+            to discover this fantastic website. The variety of dog breeds available is simply amazing,
             and the detailed descriptions helped me make an informed choice. Kudos to the team for creating such a nice platform!.
             <i id="below" class="fa fa-quote-right"></i>
           </p>
@@ -276,9 +339,9 @@
         </div>
 
         <div class="card">
-          <img src="./images" alt="image3">
+          <img src="./images/Anand Kumar.jpg" alt="image3">
           <p><i id="above" class="fa fa-quote-left"></i>If you're a dog lover in India, look no further! 
-            This dog website is a game-changer. From adorable puppies to top-quality dog accessories, 
+            This website is a game-changer. From adorable puppies to top-quality dog accessories, 
             they have it all. It's the best place to find your four-legged companion with Trust, reliablity.
             <i id="below" class="fa fa-quote-right"></i>
           </p>
@@ -287,10 +350,10 @@
         </div>
 
         <div class="card">
-          <img src="./images/Kalyan.png" alt="image4">
+          <img src="./images/Kalyan Sharma.png" alt="image4">
           <p><i id="above" class="fa fa-quote-left"></i>I appreciated the extensive range of dog breeds, 
             which catered to all my preferences. This site has everything to keep your furry companion happy and healthy.
-            Treat your furry companion like royalty with the this website!
+            Treat your furry companion like royalty with this website!
             <i id="below" class="fa fa-quote-right"></i>
           </p>
           <h2>Kalyan Sharma</h2>
@@ -323,8 +386,8 @@
       </div>
       <div class="list-footer">
         <ul><a href="#about">About Us</a></ul>
-        <ul><a href="#contact">Contact</a></ul>
-        <ul><a href="#services">Services</a></ul>
+        <ul><a href="#footer">Contact</a></ul>
+        <ul><a href="#pricing">Services</a></ul>
       </div>
       <div class="All-contacts">
         <a href="https://discord.com/channels/@me" class="icon discord" target="_blank"
@@ -350,12 +413,12 @@
       </div>
     </div>
 
-    <hr>
+    <hr style="color: rgb(255, 255, 255);">
 
     <div>
       <div class="footer-copyright">
         <center>
-          <h4>Made with ❤️ by <em>Kalyan Sharma</em></h4>
+          <h5>Made with ❤️ by <em>Kalyan Sharma</em></h5>
           <p>Copyright © <em>2023</em> RaKrish Pets</p>
         </center>
       </div>
@@ -364,7 +427,32 @@
   </footer>
 
   <!-- *****************************======index.js/files==============*********************** -->
+  <!-- *******jQuery for index.js************** -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+  <!-- *********jQuery link for scrolling effect/******** -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script type="text/Javascript" src="./index.js"></script>
+  <!-- ****************Script link for login/signup page icons***************** -->
+ <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ 
+   <!-- Bootstrap scripts -->
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+   integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+   crossorigin="anonymous"></script>
+
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+   crossorigin="anonymous"></script>
+
+   <!-- **********bootstrap  in testimonials******** -->
+  <script type="text/stylesheet" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/css/bootstrap.min.css"></script>
+
 </body>
 
 </html>
